@@ -113,7 +113,7 @@ export function Testimonials() {
   return (
     <section className="section-pad bg-cloud">
       <div className="container">
-        <p className="eyebrow">Our Testimonials</p>
+        <p className="eyebrow">Reviews &amp; Testimonials</p>
         <h2 className="headline mt-3 text-4xl md:text-5xl">What Students Say</h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {testimonials.map((item) => (

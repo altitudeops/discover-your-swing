@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Discover Your Swing®"
+        eyebrow="About Discover Your Swing!®"
         title="A trademarked philosophy for finding your own swing."
         copy="Christie Quinn helps every golfer uncover and embrace a swing that fits their body, goals, and relationship with the game."
         image="/images/adult.jpg"

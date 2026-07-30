@@ -1,5 +1,5 @@
 import { CtaBand, PageHero, ProgramGrid, Testimonials } from "@/components/Sections";
-import { programs } from "@/lib/site-data";
+import { adultPrograms } from "@/lib/site-data";
 
 export default function AdultCoachingPage() {
   return (
@@ -14,7 +14,7 @@ export default function AdultCoachingPage() {
       <ProgramGrid
         title="Adult private lessons, on-course coaching, and focused packages."
         intro="Each program focuses on individualized instruction, measurable progress, and practical strategies that transfer from the lesson tee to the golf course."
-        programs={programs}
+        programs={adultPrograms}
       />
       <Testimonials />
       <CtaBand />

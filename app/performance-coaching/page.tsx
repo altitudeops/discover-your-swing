@@ -1,5 +1,5 @@
 import { CtaBand, PageHero, Partners, ProgramGrid, Testimonials } from "@/components/Sections";
-import { programs } from "@/lib/site-data";
+import { performancePrograms } from "@/lib/site-data";
 
 export default function PerformanceCoachingPage() {
   return (
@@ -28,7 +28,7 @@ export default function PerformanceCoachingPage() {
       <ProgramGrid
         title="Ready to compete with confidence?"
         intro="Choose a performance playing lesson or work with Christie to design a custom program around your competitive schedule and goals."
-        programs={programs}
+        programs={performancePrograms}
       />
       <Partners />
       <Testimonials />

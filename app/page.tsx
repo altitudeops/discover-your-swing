@@ -41,7 +41,7 @@ export default function Home() {
         </div>
         <div className="container relative flex min-h-[calc(94vh-8rem)] items-center justify-center">
           <div className="mx-auto w-full max-w-[46rem] rise text-center">
-            <p className="eyebrow">Palm Springs Golf Lessons</p>
+            <p className="eyebrow">Golf Lessons in Palm Springs, Palm Desert &amp; San Diego</p>
             <h1 className="display mt-5 text-4xl sm:text-5xl md:text-7xl" style={{ fontWeight: 900 }}>
               Welcome to Discover Your Swing!<sup className="text-[0.42em] align-super">®</sup>
             </h1>

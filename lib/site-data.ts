@@ -45,57 +45,108 @@ export type Program = {
   details?: string[];
 };
 
-export const programs: Program[] = [
+// Christie's real lesson menu (source: original DiscoverYourSwing.com), with her
+// Pastel price corrections (#19–24) applied. Pricing is per-program, per-page —
+// not a single fabricated "package ladder."
+
+export const adultPrograms: Program[] = [
   {
-    title: "Discover Your Swing!® Assessment",
-    price: "$295",
-    meta: "90 minutes",
-    details: [
-      "Comprehensive movement screening",
-      "Swing analysis with video",
-      "Personalized Discover Your Swing!® profile",
-      "Customized improvement plan",
-      "Practice drills and lesson recap",
-    ],
-  },
-  {
-    title: "60-Minute Coaching Session",
-    price: "$175",
+    title: "60-Minute Private Lesson",
+    price: "$175", // #23
     meta: "60 minutes",
     description:
-      "Continue building your Discover Your Swing!® blueprint with personalized coaching tailored to your body, swing, and goals. Each session includes video analysis, customized drills, and a clear practice plan designed to create lasting improvement.",
+      "One-on-one coaching tailored to your body, swing, and goals — including video analysis and a clear practice plan you can take to the range.",
   },
   {
-    title: "5-Lesson Performance Package",
-    price: "$995",
-    priceNote: "Save $55 — regularly $1,050",
-    meta: "5 sessions",
+    title: "120-Minute On-Course Instruction",
+    price: "$200", // #24
+    meta: "120 minutes · on course",
     description:
-      "Designed for golfers committed to lowering scores and building consistency. You’ll receive five 60-minute coaching sessions, personalized practice plans, video feedback, and ongoing accountability to accelerate your progress.",
+      "Take the work to the course. Christie coaches strategy, scoring, and decision-making where it actually counts.",
+  },
+  {
+    title: "30-Minute Private Lesson",
+    price: "$100",
+    meta: "30 minutes",
+    description: "A focused tune-up session — perfect for a targeted fix or ongoing check-ins.",
+  },
+  {
+    title: "Senior Playing Lesson",
+    price: "$150",
+    meta: "120 minutes · 6 holes",
+    description: "On-course coaching for 6 holes with Christie; covers greens fees for the remaining 12.",
+  },
+  {
+    title: "Adult 5-Pack",
+    price: "$600",
+    priceNote: "5 × 60-minute lessons",
+    meta: "Package",
+    description: "Five one-hour private / semi-private lessons for golfers committed to lasting improvement.",
+  },
+  {
+    title: "Custom Group Lesson",
+    price: "$300",
+    meta: "60 minutes · up to 3 golfers",
+    description: "Bring your foursome-in-training. One hour of coaching for up to three golfers.",
+  },
+];
+
+export const juniorPrograms: Program[] = [
+  {
+    title: "30-Minute Private Lesson",
+    price: "$50",
+    meta: "30 minutes",
+    description: "Private / semi-private coaching for juniors ages 5–15, tailored to skill level and goals.",
+  },
+  {
+    title: "60-Minute Private Lesson",
+    price: "$100",
+    meta: "60 minutes",
+    description: "A full hour of private / semi-private junior coaching in a fun, supportive environment.",
+  },
+  {
+    title: "120-Minute On-Course Instruction",
+    price: "$125",
+    priceNote: "San Diego · $150 in Palm Springs",
+    meta: "120 minutes · on course",
+    description: "On-course junior instruction that builds confidence, course management, and love for the game.",
+  },
+  {
+    title: "Custom Group Lesson",
+    price: "$200", // #21
+    meta: "60 minutes · up to 3 golfers",
+    description: "One hour of group coaching for up to three junior golfers.",
+  },
+  {
+    title: "Performance Playing Lesson",
+    price: "$125",
+    priceNote: "San Diego · $150 in Palm Springs",
+    meta: "6 holes · on course",
+    description: "On-course performance coaching for 6 holes with Christie; covers greens fees for the remaining 12.",
+  },
+  // #20 — Junior "Series" package removed at Christie's request.
+];
+
+export const performancePrograms: Program[] = [
+  {
+    title: "Discover Your Swing!® Assessment",
+    price: "$275", // #19 — confirm label with Christie (the hero "Swing Evaluation")
+    meta: "Swing evaluation",
+    description:
+      "Your starting point: a full movement screen and swing analysis that builds your personalized Discover Your Swing!® profile and improvement plan.",
     details: [
-      "Five 60-minute coaching sessions",
-      "Personalized practice plans",
+      "Movement screening",
       "Video swing analysis",
-      "Priority scheduling",
-      "Email/text support between lessons",
+      "Personalized Discover Your Swing!® profile",
+      "Customized improvement plan",
     ],
   },
   {
-    title: "10-Lesson Transformation Package",
-    price: "$1,895",
-    priceNote: "Save $205 — regularly $2,100",
-    meta: "10 sessions",
+    title: "Performance Playing Lesson",
+    price: "$200", // #22
+    meta: "6 holes · on course",
     description:
-      "Your complete game transformation. This comprehensive coaching experience is designed for golfers who want lasting improvement through a customized long-term development plan. Together we’ll build a swing that fits your body, improve scoring skills, and create confidence that transfers to the course.",
-    details: [
-      "Ten 60-minute coaching sessions",
-      "Comprehensive swing development plan",
-      "Video analysis and progress tracking",
-      "Personalized practice programs",
-      "Priority scheduling",
-      "Email/text coaching support between lessons",
-      "One complimentary progress review",
-    ],
+      "On-course golf instruction for competitive players — 6 holes of coaching with Christie; covers greens fees for the remaining 12.",
   },
 ];
 
