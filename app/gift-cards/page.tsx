@@ -1,9 +1,26 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { GiftCardModal } from "@/components/GiftCardModal";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Golf Lesson Gift Cards",
+  description:
+    "Give the gift of better golf. Purchase a Discover Your Swing!® gift card redeemable toward any golf lesson or program with Christie Quinn.",
+  path: "/gift-cards",
+});
 
 export default function GiftCardsPage() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-cloud via-white to-cloud px-4 pb-16 pt-24 md:pb-24 md:pt-28">
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          ["Home", "/"],
+          ["Gift Cards", "/gift-cards"],
+        ])}
+      />
+      <section className="relative overflow-hidden bg-gradient-to-b from-cloud via-white to-cloud px-4 pb-16 pt-24 md:pb-24 md:pt-28">
       <Image
         src="/images/logo-mark.png"
         alt=""
@@ -48,6 +65,7 @@ export default function GiftCardsPage() {
           <GiftCardModal />
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

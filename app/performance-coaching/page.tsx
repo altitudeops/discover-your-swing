@@ -1,9 +1,35 @@
+import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
 import { CtaBand, PageHero, Partners, ProgramGrid, Testimonials } from "@/components/Sections";
+import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
 import { performancePrograms } from "@/lib/site-data";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Player Performance Coaching for Competitive Golfers",
+  description:
+    "Tournament-focused golf coaching with Christie Quinn — swing evaluation, on-course performance lessons, and data-driven player development for competitive golfers.",
+  path: "/performance-coaching",
+  image: "/images/performance.jpg",
+});
 
 export default function PerformanceCoachingPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceJsonLd({
+            name: "Player Performance Golf Coaching",
+            description:
+              "Tournament-focused golf coaching for competitive players, including swing evaluation and on-course performance lessons.",
+            path: "/performance-coaching",
+            programs: performancePrograms,
+          }),
+          breadcrumbJsonLd([
+            ["Home", "/"],
+            ["Performance Coaching", "/performance-coaching"],
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Tournament Player Coaching"
         title="Perform your best when it matters most."
