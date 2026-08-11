@@ -1,22 +1,33 @@
 import type { Metadata } from "next";
-import { Manrope, Nunito_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Preloader } from "@/components/Preloader";
 import "./globals.css";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+const manrope = localFont({
+  src: [
+    { path: "../public/fonts/manrope-500.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/manrope-600.woff2", weight: "600", style: "normal" },
+    { path: "../public/fonts/manrope-700.woff2", weight: "700", style: "normal" },
+    { path: "../public/fonts/manrope-800.woff2", weight: "800", style: "normal" },
+  ],
   variable: "--font-display",
   display: "swap",
+  fallback: ["system-ui", "arial"],
 });
 
-const nunito = Nunito_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+const nunito = localFont({
+  src: [
+    { path: "../public/fonts/nunito-sans-400.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/nunito-sans-500.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/nunito-sans-600.woff2", weight: "600", style: "normal" },
+    { path: "../public/fonts/nunito-sans-700.woff2", weight: "700", style: "normal" },
+    { path: "../public/fonts/nunito-sans-800.woff2", weight: "800", style: "normal" },
+  ],
   variable: "--font-body",
   display: "swap",
+  fallback: ["system-ui", "arial"],
 });
 
 export const metadata: Metadata = {
