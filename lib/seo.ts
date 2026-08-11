@@ -33,30 +33,39 @@ export function pageMetadata({
   title,
   description,
   path,
-  image = siteConfig.ogImage,
 }: {
   title: string;
   description: string;
   path: string;
-  image?: string;
 }): Metadata {
   const url = path === "/" ? "/" : path;
+  // og:title stays short (no brand suffix) so it doesn't exceed the ~60-char sweet spot.
+  // The shared 1200x630 card lives at app/opengraph-image.tsx; reference it explicitly
+  // so every route (not just "/") emits og:image + twitter:image.
+  const ogImage = {
+    url: "/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: siteConfig.name,
+  };
   return {
     title,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${title} · ${siteConfig.name}`,
+      title,
       description,
       url,
       type: "website",
-      images: [image],
+      siteName: siteConfig.name,
+      locale: "en_US",
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} · ${siteConfig.name}`,
+      title,
       description,
-      images: [image],
+      images: [ogImage],
     },
   };
 }

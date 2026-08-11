@@ -8,9 +8,8 @@ import { videos } from "@/lib/site-data";
 export const metadata: Metadata = pageMetadata({
   title: "Golf Coaching Videos",
   description:
-    "A curated library of swing, performance, and player-development videos from Christie Quinn of Discover Your Swing!® — keep learning between lessons.",
+    "A curated library of swing, performance, and player-development videos from Christie Quinn — keep learning between lessons.",
   path: "/videos",
-  image: "/images/on-course.jpg",
 });
 
 export default function VideosPage() {

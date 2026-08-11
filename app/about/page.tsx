@@ -8,9 +8,8 @@ import { bookingUrl, email, phone } from "@/lib/site-data";
 export const metadata: Metadata = pageMetadata({
   title: "About Christie Quinn, LPGA Class A Professional",
   description:
-    "Meet Christie Quinn — LPGA Class A Professional and LPGA Vice President behind Discover Your Swing!®, a trademarked philosophy for finding the swing your body was built to make.",
+    "Meet Christie Quinn — LPGA Class A Professional and Vice President behind Discover Your Swing!®, a philosophy for finding your own swing.",
   path: "/about",
-  image: "/images/adult.jpg",
 });
 
 export default function AboutPage() {

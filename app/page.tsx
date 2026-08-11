@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ...pageMetadata({
     title: "Golf Lessons in Palm Springs, Palm Desert & San Diego",
     description:
-      "Discover Your Swing!® offers personalized golf lessons and player development with Christie Quinn, LPGA Class A Professional. Book a swing evaluation in Palm Springs, Palm Desert, or San Diego.",
+      "Personalized golf lessons with Christie Quinn, LPGA Class A Professional — serving Palm Springs, Palm Desert & San Diego.",
     path: "/",
   }),
   // Root page shares the root segment, so the layout title template does not apply here.

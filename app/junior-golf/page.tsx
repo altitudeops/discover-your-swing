@@ -7,9 +7,8 @@ import { juniorPrograms } from "@/lib/site-data";
 export const metadata: Metadata = pageMetadata({
   title: "Junior Golf Lessons & Development Programs",
   description:
-    "Junior golf coaching for ages 5–15 with Christie Quinn — private lessons, group sessions, and on-course instruction that build skill, confidence, and a love for the game.",
+    "Junior golf coaching for ages 5–15 with Christie Quinn — private, group, and on-course lessons that build skill and confidence.",
   path: "/junior-golf",
-  image: "/images/adult.jpg",
 });
 
 export default function JuniorGolfPage() {
