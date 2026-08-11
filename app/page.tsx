@@ -1,7 +1,49 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Faq, type FaqItem } from "@/components/Faq";
+import { JsonLd } from "@/components/JsonLd";
 import { CtaBand, Partners, Testimonials } from "@/components/Sections";
+import { faqJsonLd, pageMetadata } from "@/lib/seo";
 import { bookingUrl } from "@/lib/site-data";
+
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: "Golf Lessons in Palm Springs, Palm Desert & San Diego",
+    description:
+      "Discover Your Swing!® offers personalized golf lessons and player development with Christie Quinn, LPGA Class A Professional. Book a swing evaluation in Palm Springs, Palm Desert, or San Diego.",
+    path: "/",
+  }),
+  // Root page shares the root segment, so the layout title template does not apply here.
+  title: "Discover Your Swing!® — Golf Lessons in Palm Springs, Palm Desert & San Diego",
+};
+
+const faqs: FaqItem[] = [
+  {
+    q: "Where does Christie Quinn offer golf lessons?",
+    a: "Discover Your Swing!® offers golf instruction in Palm Springs, Palm Desert, and San Diego, California — on the lesson tee and out on the course.",
+  },
+  {
+    q: "Who is Christie Quinn?",
+    a: "Christie Quinn is an LPGA Class A Professional and the current LPGA Vice President, with 25 years of coaching experience and more than 7,000 students taught. She is a Golf Digest Top 50 Teacher and the 2017 LPGA Coach of the Year.",
+  },
+  {
+    q: "How much do golf lessons cost?",
+    a: "Adult private lessons start at $100 for 30 minutes and $175 for 60 minutes. Junior lessons start at $50 for 30 minutes. The Discover Your Swing!® Assessment — a full movement screen, video analysis, and personalized plan — is $275.",
+  },
+  {
+    q: "Do you coach junior golfers?",
+    a: "Yes. Christie coaches juniors ages 5–15 with private, group, and on-course programs designed to build skill, confidence, and a lasting love for the game.",
+  },
+  {
+    q: "What is a Discover Your Swing!® Assessment?",
+    a: "It is your starting point: a full movement screen and video swing analysis that builds your personalized Discover Your Swing!® profile and a customized improvement plan.",
+  },
+  {
+    q: "How do I book a lesson?",
+    a: "You can book online any time through the booking link on this site, or reach Christie directly by phone or email to find a time that works for you.",
+  },
+];
 
 const paths = [
   {
@@ -167,7 +209,9 @@ export default function Home() {
 
       <Partners />
       <Testimonials />
+      <Faq items={faqs} />
       <CtaBand />
+      <JsonLd data={faqJsonLd(faqs)} />
     </>
   );
 }
