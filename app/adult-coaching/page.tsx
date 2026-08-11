@@ -5,9 +5,9 @@ import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
 import { adultPrograms } from "@/lib/site-data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Adult Golf Lessons in Palm Springs, Palm Desert & San Diego",
+  title: "Adult Golf Lessons in Palm Springs & San Diego",
   description:
-    "Private adult golf lessons, on-course coaching, and lesson packages with Christie Quinn — individualized instruction that transfers from the lesson tee to the course.",
+    "Private adult golf lessons, on-course coaching, and lesson packages with Christie Quinn — instruction that transfers to the course.",
   path: "/adult-coaching",
 });
 

@@ -7,7 +7,7 @@ import { performancePrograms } from "@/lib/site-data";
 export const metadata: Metadata = pageMetadata({
   title: "Player Performance Coaching for Competitive Golfers",
   description:
-    "Tournament-focused golf coaching with Christie Quinn — swing evaluation, on-course performance lessons, and data-driven player development for competitive golfers.",
+    "Tournament-focused golf coaching with Christie Quinn — swing evaluation, on-course lessons, and data-driven player development.",
   path: "/performance-coaching",
 });
 

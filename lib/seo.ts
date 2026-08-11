@@ -40,7 +40,14 @@ export function pageMetadata({
 }): Metadata {
   const url = path === "/" ? "/" : path;
   // og:title stays short (no brand suffix) so it doesn't exceed the ~60-char sweet spot.
-  // Open Graph / Twitter images come from the shared app/opengraph-image.tsx card.
+  // The shared 1200x630 card lives at app/opengraph-image.tsx; reference it explicitly
+  // so every route (not just "/") emits og:image + twitter:image.
+  const ogImage = {
+    url: "/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: siteConfig.name,
+  };
   return {
     title,
     description,
@@ -50,11 +57,15 @@ export function pageMetadata({
       description,
       url,
       type: "website",
+      siteName: siteConfig.name,
+      locale: "en_US",
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage],
     },
   };
 }
