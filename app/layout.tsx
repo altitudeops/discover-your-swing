@@ -61,13 +61,13 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "en_US",
-    images: ["/images/hero-christie.jpg"],
+    // og:image is supplied by app/opengraph-image.tsx (1200x630 branded card).
   },
   twitter: {
     card: "summary_large_image",
     title: "Discover Your Swing!®",
     description: "Professional golf lessons and performance coaching with Christie Quinn.",
-    images: ["/images/hero-christie.jpg"],
+    // twitter:image is supplied by app/opengraph-image.tsx.
   },
   robots: {
     index: true,

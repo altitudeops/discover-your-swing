@@ -10,7 +10,6 @@ export const metadata: Metadata = pageMetadata({
   description:
     "A curated library of swing, performance, and player-development videos from Christie Quinn of Discover Your Swing!® — keep learning between lessons.",
   path: "/videos",
-  image: "/images/on-course.jpg",
 });
 
 export default function VideosPage() {

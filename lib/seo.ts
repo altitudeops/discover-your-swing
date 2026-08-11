@@ -33,30 +33,28 @@ export function pageMetadata({
   title,
   description,
   path,
-  image = siteConfig.ogImage,
 }: {
   title: string;
   description: string;
   path: string;
-  image?: string;
 }): Metadata {
   const url = path === "/" ? "/" : path;
+  // og:title stays short (no brand suffix) so it doesn't exceed the ~60-char sweet spot.
+  // Open Graph / Twitter images come from the shared app/opengraph-image.tsx card.
   return {
     title,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${title} · ${siteConfig.name}`,
+      title,
       description,
       url,
       type: "website",
-      images: [image],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} · ${siteConfig.name}`,
+      title,
       description,
-      images: [image],
     },
   };
 }

@@ -9,7 +9,6 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Private adult golf lessons, on-course coaching, and lesson packages with Christie Quinn — individualized instruction that transfers from the lesson tee to the course.",
   path: "/adult-coaching",
-  image: "/images/junior.jpg",
 });
 
 export default function AdultCoachingPage() {

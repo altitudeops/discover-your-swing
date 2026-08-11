@@ -9,7 +9,6 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Tournament-focused golf coaching with Christie Quinn — swing evaluation, on-course performance lessons, and data-driven player development for competitive golfers.",
   path: "/performance-coaching",
-  image: "/images/performance.jpg",
 });
 
 export default function PerformanceCoachingPage() {

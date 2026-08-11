@@ -9,7 +9,6 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Junior golf coaching for ages 5–15 with Christie Quinn — private lessons, group sessions, and on-course instruction that build skill, confidence, and a love for the game.",
   path: "/junior-golf",
-  image: "/images/adult.jpg",
 });
 
 export default function JuniorGolfPage() {
