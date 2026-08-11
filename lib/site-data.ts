@@ -5,6 +5,7 @@ export const phone = "508-330-6731";
 export const socialLinks = [
   { label: "Facebook", href: "https://facebook.com/discoveryourswing" },
   { label: "Instagram", href: "https://instagram.com/discoveryourswing" },
+  { label: "Yelp", href: "https://yelp.com/biz/discover-your-swing-san-diego-3" },
 ];
 
 export const navItems = [
